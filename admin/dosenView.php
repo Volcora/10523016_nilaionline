@@ -19,7 +19,7 @@ $result = mysqli_query($conn, $query);
                 <th>Nama</th>
                 <th>Kode Matkul</th>
                 <th>Aksi</th>
-                <th><a href="dosenAdd.php">Tambah</a></th>
+                <th><a href="./?adm=dosenAdd">Tambah</a></th>
             </tr>
         </thead>
         <tbody>

@@ -33,11 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <form method="POST">
         <input type="hidden" name="nip" value="<?= $data['nip'] ?>">
         <label>Nama:</label>
-        <input type="text" name="nama" value="<?= $data['nama'] ?>" required><br>
-        <label>Username:</label>
-        <input type="text" name="kode_mtkul" value="<?= $data['kode_mtkul'] ?>" required><br>
+        <input type="text" name="nama" value="<?= isset($data['nama']) ? $data['nama'] : 'Data tidak tersedia'; ?>" required><br>
+        <label>Kode Mtkul:</label>
+        <input type="text" name="kode_mtkul" value="<?= isset($data['kode_mtkul']) ? $data['kode_mtkul'] : 'Data tidak tersedia'; ?>" required><br>
         <label>Password:</label>
-        <input type="password" name="password" value="<?= $data['password'] ?>" required><br>
+        <input type="password" name="password" value="<?= isset($data['password']) ? $data['password'] : ''; ?>" required><br>
         <button type="submit">Simpan</button>
     </form>
 </body>
